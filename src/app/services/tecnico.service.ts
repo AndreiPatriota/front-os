@@ -13,19 +13,29 @@ export class TecnicoService {
   baseUrl: String 
 
   constructor(
-    private client: HttpClient,
+    private http: HttpClient,
     private snackBar: MatSnackBar) { 
       this.baseUrl = enviroment.baseUrl
     }
 
   findAll(): Observable<Tecnico[]> {
-    const url = this.baseUrl + '/tecnicos'
-    return this.client.get<Tecnico[]>(url)
+    const url = `${this.baseUrl}/tecnicos`
+    return this.http.get<Tecnico[]>(url)
+  }
+
+  findById(inId: number): Observable<Tecnico> {
+    const url = `${this.baseUrl}/tecnicos/${inId}`
+    return this.http.get<Tecnico>(url)
   }
 
   create(inTecnico: Tecnico): Observable<Tecnico> {
-    const url = this.baseUrl + '/tecnicos'
-    return this.client.post<Tecnico>(url, inTecnico)
+    const url = `${this.baseUrl}/tecnicos`
+    return this.http.post<Tecnico>(url, inTecnico)
+  }
+
+  update(inTecnico: Tecnico): Observable<Tecnico> {
+    const url = `${this.baseUrl}/tecnicos/${inTecnico.id}`
+    return this.http.put<Tecnico>(url, inTecnico)
   }
 
   message(inMessage: String) {

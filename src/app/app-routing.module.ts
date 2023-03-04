@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/components/home/home.component';
 import { TecnicoReadComponent } from './views/components/tecnicos/tecnico-read/tecnico-read.component';
 import { TecnicoCreateComponent } from './views/components/tecnicos/tecnico-create/tecnico-create.component';
+import { compileDeclareFactoryFunction } from '@angular/compiler';
+import { TecnicoUpdateComponent } from './views/components/tecnicos/tecnico-update/tecnico-update.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path: 'tecnicos/create',
     component: TecnicoCreateComponent
+  },
+  {
+    path: 'tecnicos/update/:id',
+    component: TecnicoUpdateComponent
   }
 ];
 

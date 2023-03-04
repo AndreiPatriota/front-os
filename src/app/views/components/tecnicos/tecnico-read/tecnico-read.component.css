@@ -21,3 +21,7 @@ table {
     font-size: 2rem;
     margin-bottom: .2;
 }
+
+#edit {
+    color: rgb(117, 209, 232);
+}

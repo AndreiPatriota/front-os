@@ -1,5 +1,5 @@
 <form class="form mat-elevation-z8">
-    <h1>Cadastrar um novo Técnico</h1>
+    <h1>Atualiza o cadastro do Técnico</h1>
     <mat-form-field class="full-width">
         <mat-label>Nome</mat-label>
         <input [(ngModel)]="tecnico.nome" [formControl]="nome" required name="nome" maxlength="100" matInput
@@ -19,6 +19,6 @@
         <mat-error *ngIf="telefone.invalid">{{ validaTelefone() }}</mat-error>
     </mat-form-field>
 
-    <button class="mat-elevation-z8" (click)="create()" [disabled]="validaNome() || validaCpf() || validaTelefone()" mat-stroked-button color="accent">CADASTRAR</button>
+    <button class="mat-elevation-z8" (click)="update()" [disabled]="validaNome() || validaCpf() || validaTelefone()" mat-stroked-button color="accent">ATUALIZA CADASTRO</button>
     <button class="mat-elevation-z8" (click)="cancelaCadastro()" mat-stroked-button color="warn">CANCELAR</button>
 </form>
