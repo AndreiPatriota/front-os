@@ -9,16 +9,19 @@
 
     <mat-form-field class="full-width">
         <mat-label>CPF</mat-label>
-        <input [(ngModel)]="tecnico.cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput placeholder="000.000.000-00">
+        <input [(ngModel)]="tecnico.cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput
+            placeholder="000.000.000-00">
         <mat-error *ngIf="cpf.invalid">{{ validaCpf() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="full-width">
         <mat-label>Telefone</mat-label>
-        <input [(ngModel)]="tecnico.telefone" [formControl]="telefone" required name="telefone" maxlength="18" matInput placeholder="(00)91234-5678">
+        <input [(ngModel)]="tecnico.telefone" [formControl]="telefone" required name="telefone" maxlength="18" matInput
+            placeholder="(00)91234-5678">
         <mat-error *ngIf="telefone.invalid">{{ validaTelefone() }}</mat-error>
     </mat-form-field>
 
-    <button class="mat-elevation-z8" (click)="create()" [disabled]="validaNome() || validaCpf() || validaTelefone()" mat-stroked-button color="accent">CADASTRAR</button>
+    <button class="mat-elevation-z8" (click)="create()" [disabled]="validaNome() || validaCpf() || validaTelefone()"
+        mat-stroked-button color="accent">CADASTRAR</button>
     <button class="mat-elevation-z8" (click)="cancelaCadastro()" mat-stroked-button color="warn">CANCELAR</button>
 </form>
