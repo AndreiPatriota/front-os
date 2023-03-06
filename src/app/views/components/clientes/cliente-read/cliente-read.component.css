@@ -1,0 +1,33 @@
+.container {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+}
+
+.fab-container {
+    top: auto !important;
+    right: 10px !important;
+    bottom: 60px !important;
+    left: auto !important;
+    position: fixed !important;
+}
+
+.create {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: .2;
+}
+
+#edit {
+    color: rgb(117, 209, 232);
+    padding-right: 1rem;
+}
+
+#delete {
+    color: red;
+    padding-left: 1rem;
+}

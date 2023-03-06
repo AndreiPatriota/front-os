@@ -6,6 +6,7 @@ import { TecnicoCreateComponent } from './views/components/tecnicos/tecnico-crea
 import { compileDeclareFactoryFunction } from '@angular/compiler';
 import { TecnicoUpdateComponent } from './views/components/tecnicos/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './views/components/tecnicos/tecnico-delete/tecnico-delete.component';
+import { ClienteReadComponent } from './views/components/clientes/cliente-read/cliente-read.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'tecnicos/delete/:id',
     component: TecnicoDeleteComponent
+  },
+  {
+    path: 'clientes',
+    component: ClienteReadComponent
   }
 ];
 
