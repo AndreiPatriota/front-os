@@ -38,6 +38,11 @@ export class TecnicoService {
     return this.http.put<Tecnico>(url, inTecnico)
   }
 
+  delete(inTecnico: Tecnico): Observable<Tecnico>{
+    const url = `${this.baseUrl}/tecnicos/${inTecnico.id}`
+    return this.http.delete<Tecnico>(url)
+  }
+
   message(inMessage: String) {
     this.snackBar.open(`${inMessage}`, 'OK', {
       horizontalPosition: 'end',
