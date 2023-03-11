@@ -29,9 +29,14 @@ export class ClienteService {
         return this.http.get<Cliente>(url)
     }
 
-    create(inCliente: Cliente): Observable<Tecnico> {
+    create(inCliente: Cliente): Observable<Cliente> {
         const url = `${this.baseUrl}/clientes`
         return this.http.post<Cliente>(url, inCliente)
+    }
+
+    update(inCliente: Cliente): Observable<Cliente> {
+        const url = `${this.baseUrl}/clientes/${inCliente.id}`
+        return this.http.put<Cliente>(url, inCliente)
     }
 
     message(inMessage: String) {

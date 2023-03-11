@@ -12,7 +12,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteReadComponent {
   listadeClientes: Cliente[] = []
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone']
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone', 'acoes']
   dataSource = new MatTableDataSource<Cliente>(this.listadeClientes)
 
   @ViewChild(MatPaginator) paginator!: MatPaginator
@@ -26,8 +26,8 @@ export class ClienteReadComponent {
   }
 
   findAll() {
-    this.service.findAll().subscribe((inResponse) => {
-      this.listadeClientes = inResponse
+    this.service.findAll().subscribe((inHttpResponse) => {
+      this.listadeClientes = inHttpResponse
       this.dataSource = new MatTableDataSource<Cliente>(this.listadeClientes)
       this.dataSource.paginator = this.paginator
     })
