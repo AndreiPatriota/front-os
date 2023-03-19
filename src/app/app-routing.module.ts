@@ -9,6 +9,7 @@ import { TecnicoDeleteComponent } from './views/components/tecnicos/tecnico-dele
 import { ClienteReadComponent } from './views/components/clientes/cliente-read/cliente-read.component';
 import { ClienteCreateComponent } from './views/components/clientes/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './views/components/clientes/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './views/components/clientes/cliente-delete/cliente-delete.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'clientes/update/:id',
     component: ClienteUpdateComponent
+  },
+  {
+    path: 'clientes/delete/:id',
+    component: ClienteDeleteComponent
   }
 ];
 

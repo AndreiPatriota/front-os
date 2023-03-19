@@ -1,0 +1,20 @@
+<form class="form mat-elevation-z8">
+    <h1>Exclui o cadastro de um Cliente</h1>
+    <mat-form-field class="full-width">
+        <mat-label>Nome</mat-label>
+        <input disabled [(ngModel)]="cliente.nome" name="nome" maxlength="100" matInput placeholder="João Silva">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>CPF</mat-label>
+        <input disabled [(ngModel)]="cliente.cpf" name="cpf" maxlength="15" matInput placeholder="000.000.000-00">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Telefone</mat-label>
+        <input disabled [(ngModel)]="cliente.telefone" name="telefone" maxlength="18" matInput placeholder="(00)91234-5678">
+    </mat-form-field>
+
+    <button class="mat-elevation-z8" (click)="delete()" mat-stroked-button color="accent">EXCLUIR CLIENTE</button>
+    <button class="mat-elevation-z8" (click)="cancelaCadastro()" mat-stroked-button color="warn">CANCELAR</button>
+</form>

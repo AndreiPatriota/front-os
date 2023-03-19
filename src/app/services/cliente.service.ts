@@ -39,6 +39,11 @@ export class ClienteService {
         return this.http.put<Cliente>(url, inCliente)
     }
 
+    delete(inCliente: Cliente): Observable<Cliente> {
+        const url = `${this.baseUrl}/clientes/${inCliente.id}`
+        return this.http.delete<Cliente>(url)
+    }
+
     message(inMessage: String) {
         this.snackBar.open(`${inMessage}`, 'OK', {
           horizontalPosition: 'end',

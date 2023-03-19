@@ -40,7 +40,7 @@ export class TecnicoDeleteComponent implements OnInit {
   delete() {
     this.service.delete(this.tecnico).subscribe((inResponse) => {
       this.router.navigate(['/tecnicos'])
-      this.service.message('Técnico deleto com sucesso!')
+      this.service.message('Técnico deletado com sucesso!')
     }, inHttpErro => {
       if (inHttpErro.error.error.match('ordens de serviço')) {
         this.service.message('Técnico possui ordens de serviço pendentes.')
