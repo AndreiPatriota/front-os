@@ -10,6 +10,7 @@ import { ClienteReadComponent } from './views/components/clientes/cliente-read/c
 import { ClienteCreateComponent } from './views/components/clientes/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './views/components/clientes/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './views/components/clientes/cliente-delete/cliente-delete.component';
+import { OrdemReadComponent } from './views/components/ordens/ordem-read/ordem-read.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'clientes/delete/:id',
     component: ClienteDeleteComponent
+  },
+  {
+    path: 'ordens',
+    component: OrdemReadComponent
   }
 ];
 
