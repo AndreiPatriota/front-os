@@ -1,4 +1,5 @@
 <div class="container">
+  <h1>Criando uma Ordem de Serviço</h1>
   <div class="labels">
     <mat-form-field appearance="fill">
       <mat-label>Selecione um técnico</mat-label>
@@ -61,7 +62,7 @@
   >
     Criar Ordem
   </button>
-  <button class="mat-elevation-z8" mat-stroked-button color="warn">
+  <button (click)="cancela()" class="mat-elevation-z8" mat-stroked-button color="warn">
     Cancelar
   </button>
 </div>

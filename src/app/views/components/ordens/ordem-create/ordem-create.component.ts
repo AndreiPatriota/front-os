@@ -36,6 +36,10 @@ export class OrdemCreateComponent implements OnInit {
     this.listaClientes();
   }
 
+  cancela() {
+    this.router.navigate(['ordens'])
+  }
+
   create() {
     this.service.create(this.ordem).subscribe(
       (incoming) => {
