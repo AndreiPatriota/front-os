@@ -8,11 +8,11 @@ import { OrdensService } from 'src/app/services/ordens.service';
 import { TecnicoService } from 'src/app/services/tecnico.service';
 
 @Component({
-  selector: 'app-ordem-read',
-  templateUrl: './ordem-read.component.html',
-  styleUrls: ['./ordem-read.component.css'],
+  selector: 'app-ordem-closed',
+  templateUrl: './ordem-closed.component.html',
+  styleUrls: ['./ordem-closed.component.css']
 })
-export class OrdemReadComponent implements AfterViewInit {
+export class OrdemClosedComponent implements AfterViewInit {
   listadeOrdens: Ordem[] = [];
 
   displayedColumns: string[] = [
@@ -44,7 +44,7 @@ export class OrdemReadComponent implements AfterViewInit {
       (inOrdens) => {
         /* this.listadeOrdens = inOrdens; */
         inOrdens.forEach((ordem) => {
-          if (ordem.status != 'ENCERRADO') {
+          if (ordem.status == 'ENCERRADO') {
             this.listadeOrdens.push(ordem);
           }
         });
@@ -77,10 +77,6 @@ export class OrdemReadComponent implements AfterViewInit {
     );
   }
 
-  navigate2Create() {
-    this.router.navigate(['ordens/create']);
-  }
-
   prioridade(inPrioridade: any): String {
     switch (inPrioridade) {
       case 'ALTA':
@@ -92,3 +88,4 @@ export class OrdemReadComponent implements AfterViewInit {
     }
   }
 }
+

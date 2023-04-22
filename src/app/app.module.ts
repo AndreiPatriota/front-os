@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { HeaderComponent } from './views/components/template/header/header.component';
 import { FooterComponent } from './views/components/template/footer/footer.component';
@@ -36,6 +37,7 @@ import { OrdemReadComponent } from './views/components/ordens/ordem-read/ordem-r
 import { OrdemCreateComponent } from './views/components/ordens/ordem-create/ordem-create.component';
 import { OrdemUpdateComponent } from './views/components/ordens/ordem-update/ordem-update.component';
 import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-view.component';
+import { OrdemClosedComponent } from './views/components/ordens/ordem-closed/ordem-closed.component';
 
 @NgModule({
   declarations: [
@@ -55,22 +57,23 @@ import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-v
     OrdemReadComponent,
     OrdemCreateComponent,
     OrdemUpdateComponent,
-    OrdemViewComponent
+    OrdemViewComponent,
+    OrdemClosedComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, 
-    BrowserAnimationsModule, 
-    HttpClientModule, 
-    BrowserModule, 
-    AppRoutingModule, 
-    BrowserAnimationsModule, 
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
-    MatSidenavModule, 
-    MatIconModule, 
-    MatButtonModule, 
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
     MatListModule,
     MatCardModule,
     MatTableModule,
@@ -78,9 +81,10 @@ import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-v
     MatInputModule,
     MatDatepickerModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

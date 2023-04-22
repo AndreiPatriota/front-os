@@ -13,6 +13,7 @@ import { OrdemReadComponent } from './views/components/ordens/ordem-read/ordem-r
 import { OrdemCreateComponent } from './views/components/ordens/ordem-create/ordem-create.component';
 import { OrdemUpdateComponent } from './views/components/ordens/ordem-update/ordem-update.component';
 import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-view.component';
+import { OrdemClosedComponent } from './views/components/ordens/ordem-closed/ordem-closed.component';
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
     path: 'ordens/view/:id',
     component: OrdemViewComponent,
   },
+  {
+    path: 'ordens/closed',
+    component: OrdemClosedComponent,
+  }
 ];
 
 @NgModule({
