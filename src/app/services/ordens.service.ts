@@ -25,18 +25,18 @@ export class OrdensService {
     return this.http.get<Ordem>(url);
   }
 
-  create(inCliente: Ordem): Observable<Ordem> {
+  create(inOrdem: Ordem): Observable<Ordem> {
     const url = `${this.baseUrl}/ordens`;
-    return this.http.post<Ordem>(url, inCliente);
+    return this.http.post<Ordem>(url, inOrdem);
   }
 
-  update(inCliente: Ordem): Observable<Ordem> {
-    const url = `${this.baseUrl}/ordens/${inCliente.id}`;
-    return this.http.put<Ordem>(url, inCliente);
+  update(inOrdem: Ordem): Observable<Ordem> {
+    const url = `${this.baseUrl}/ordens/${inOrdem.id}`;
+    return this.http.put<Ordem>(url, inOrdem);
   }
 
-  delete(inCliente: Ordem): Observable<Ordem> {
-    const url = `${this.baseUrl}/ordens/${inCliente.id}`;
+  delete(inOrdem: Ordem): Observable<Ordem> {
+    const url = `${this.baseUrl}/ordens/${inOrdem.id}`;
     return this.http.delete<Ordem>(url);
   }
 
