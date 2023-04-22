@@ -35,6 +35,7 @@ import { ClienteDeleteComponent } from './views/components/clientes/cliente-dele
 import { OrdemReadComponent } from './views/components/ordens/ordem-read/ordem-read.component';
 import { OrdemCreateComponent } from './views/components/ordens/ordem-create/ordem-create.component';
 import { OrdemUpdateComponent } from './views/components/ordens/ordem-update/ordem-update.component';
+import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-view.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { OrdemUpdateComponent } from './views/components/ordens/ordem-update/ord
     ClienteDeleteComponent,
     OrdemReadComponent,
     OrdemCreateComponent,
-    OrdemUpdateComponent
+    OrdemUpdateComponent,
+    OrdemViewComponent
   ],
   imports: [
     BrowserModule,

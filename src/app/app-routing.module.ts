@@ -12,6 +12,7 @@ import { ClienteDeleteComponent } from './views/components/clientes/cliente-dele
 import { OrdemReadComponent } from './views/components/ordens/ordem-read/ordem-read.component';
 import { OrdemCreateComponent } from './views/components/ordens/ordem-create/ordem-create.component';
 import { OrdemUpdateComponent } from './views/components/ordens/ordem-update/ordem-update.component';
+import { OrdemViewComponent } from './views/components/ordens/ordem-view/ordem-view.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'ordens/update/:id',
     component: OrdemUpdateComponent,
+  },
+  {
+    path: 'ordens/view/:id',
+    component: OrdemViewComponent,
   },
 ];
 
